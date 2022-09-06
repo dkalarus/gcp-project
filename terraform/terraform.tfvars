@@ -1,0 +1,6 @@
+project              = "terraformprojecttest-359310"
+region               = "europe-central2"
+project_name         = "dkproject"
+zone                 = "b"
+gce_ssh_user         = "damiankalarus"
+gce_ssh_pub_key_file = "id_rsa.pub"
