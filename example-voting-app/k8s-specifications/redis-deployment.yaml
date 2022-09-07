@@ -16,7 +16,7 @@ spec:
         app: redis
     spec:
       containers:
-      - image: redis:alpine
+      - image: europe-central2-docker.pkg.dev/terraformprojecttest-359310/docker-registry/redis:1.0
         name: redis
         ports:
         - containerPort: 6379

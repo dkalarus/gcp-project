@@ -16,5 +16,27 @@ spec:
         app: worker
     spec:
       containers:
-      - image: dockersamples/examplevotingapp_worker
+      - image: europe-central2-docker.pkg.dev/terraformprojecttest-359310/docker-registry/worker-app:1.1
         name: worker
+        env:
+        - name: PGHOST
+          valueFrom:
+            configMapKeyRef:
+              name: db-config
+              key: host
+        - name: PGPORT
+          valueFrom:
+            configMapKeyRef:
+              name: db-config
+              key: port
+        - name: PGUSER
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: username
+        - name: PGPASS
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: password
+

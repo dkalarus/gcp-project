@@ -16,7 +16,7 @@ spec:
         app: vote
     spec:
       containers:
-      - image: dockersamples/examplevotingapp_vote:before
+      - image: europe-central2-docker.pkg.dev/terraformprojecttest-359310/docker-registry/voting-app:1.0 
         name: vote
         ports:
         - containerPort: 80
